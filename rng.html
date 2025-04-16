@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rad 90's Random Number Generator</title>
+    <style>
+    body {
+        background: url('https://www.transparenttextures.com/patterns/brick-wall.png'), #00ffff;
+        color: #ff00ff;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive, Times, serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-size: 48px;
+        text-shadow: 2px 2px #ffff00;
+        margin-top: 30px;
+    }
+    .button {
+        background: linear-gradient(90deg, #ff0 40%, #f0f 100%);
+        border: 4px outset #000;
+        color: #000;
+        font-size: 28px;
+        font-family: 'Comic Sans MS', cursive;
+        padding: 20px 40px;
+        margin: 20px;
+        cursor: pointer;
+        box-shadow: 4px 4px 0 #0ff;
+    }
+    #result {
+        font-size: 60px;
+        margin: 30px;
+        color: #00ff00;
+        text-shadow: 2px 2px #0000ff;
+    }
+    .gif {
+        margin: 10px;
+        height: 60px;
+    }
+    .counter {
+        font-size: 18px;
+        color: #fff;
+        background: #000;
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 10px;
+        margin-top: 40px;
+    }
+    a {
+        color: #ff0;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    </style>
+    <script>
+    function generateNumber() {
+      var randomNum = Math.floor(Math.random() * 100) + 1;
+        document.getElementById("result").innerText = randomNum;
+        document.getElementById("result").style.color = 
+        ['#00ff00', '#ff0000', '#0000ff', '#ffff00', '#ff00ff'][Math.floor(Math.random() * 5)];
+    }
+    </script>
+</head>
+<body>
+    <h1>
+    90's Random Number Generator!
+    </h1>
+    <button class="button" onclick="generateNumber()">Generate!</button>
+    <div id="result">?</div>
+    <div class="counter">
+    Visitor Counter: <span id="visitorCount">00042</span>
+    </div>
+    <div style="margin-top:30px;">
+    </div>
+    <!-- Optional: 90s MIDI music (autoplay, may be blocked by browsers) -->
+    <audio src="https://www.vgmusic.com/music/console/nintendo/nes/Tetris_theme.mid" autoplay loop>
+    Your browser does not support the audio element.
+    </audio>
+    <br>
+    <a href="aboutme.html">Click to get back to my about me page!</a>
+    <br>
+    <a href="index.html">Click to get back to my resume!</a>
+</body>
+</html>
